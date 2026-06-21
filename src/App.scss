@@ -1,0 +1,16 @@
+@use "./styles/typography" as *;
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+  padding-block: var(--spacing-xl);
+  text-align: center;
+}
+
+.brand {
+  max-width: 75%;
+}

@@ -1,0 +1,107 @@
+@use "tokens" as *;
+
+@mixin text-display {
+  font-family: var(--font-sans);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+@mixin text-display-mobile {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+@mixin text-headline-lg {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+@mixin text-headline-lg-mobile {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+@mixin text-headline-md {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+@mixin text-body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@mixin text-body-md {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+@mixin text-code-md {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+@mixin text-label-sm {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.text-display {
+  @include text-display;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include text-display-mobile;
+  }
+}
+
+.text-headline-lg {
+  @include text-headline-lg;
+
+  @media (max-width: $breakpoint-mobile) {
+    @include text-headline-lg-mobile;
+  }
+}
+
+.text-headline-md {
+  @include text-headline-md;
+}
+
+.text-body-lg {
+  @include text-body-lg;
+}
+
+.text-body-md {
+  @include text-body-md;
+}
+
+.text-code-md {
+  @include text-code-md;
+}
+
+.text-label-sm {
+  @include text-label-sm;
+}
